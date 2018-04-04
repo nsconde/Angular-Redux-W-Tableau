@@ -1,0 +1,32 @@
+#app {
+    padding:2em;
+}
+
+.headerNav li > a{
+    color:white;
+}
+
+.contentView {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+.contentView .contentPanel {
+    padding-top: 10px;
+}
+
+.list-group-item.active {
+    background-color: #031f5d54;
+    border-color: #007bff96;
+}
+
+.page-header h1 {
+    text-decoration: underline;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+} 
