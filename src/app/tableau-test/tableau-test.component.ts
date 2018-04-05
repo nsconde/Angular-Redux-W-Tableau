@@ -24,7 +24,7 @@ export class TableauTestComponent implements OnInit {
     var url = "https://public.tableau.com/views/RottenTomatoes-Criticsvs_Audience/RT-Criticsvs_Audience?:embed=y&:display_count=yes";
     var options = {
       width: placeholderDiv.offsetWidth,
-      height: placeholderDiv.offsetHeight,
+      height: 750,
       hideTabs: true,
       hideToolbar: true,
       onFirstInteractive: function () {

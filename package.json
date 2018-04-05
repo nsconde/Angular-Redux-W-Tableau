@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^5.2.9",
     "@angular/router": "^5.2.9",
     "core-js": "^2.4.1",
+    "d3": "^5.0.0",
     "redux": "^3.7.2",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
@@ -31,6 +32,7 @@
     "@angular/cli": "1.7.3",
     "@angular/compiler-cli": "^5.2.9",
     "@angular/language-service": "^5.2.9",
+    "@types/d3": "^5.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",

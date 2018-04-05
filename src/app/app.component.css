@@ -3,7 +3,7 @@
 }
 
 .headerNav li > a{
-    color:white;
+    color:#e8e8e8;
 }
 
 .contentView {
@@ -12,6 +12,7 @@
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
+    min-height: 775px;
 }
 
 .contentView .contentPanel {
@@ -23,8 +24,14 @@
     border-color: #007bff96;
 }
 
+.page-header {
+    padding-left: 12px;
+}
+
 .page-header h1 {
     text-decoration: underline;
+    color: #e8e8e8;
+    font-family: 'Roboto', sans-serif;
 }
 
 .nav-link.active {
