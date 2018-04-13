@@ -9,8 +9,6 @@ import { AppComponent } from './app.component';
 import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TableauTestComponent } from './tableau-test/tableau-test.component';
-import { LineExampleComponent } from './line-example/line-example.component';
-import { SharedComponent } from './visuals/shared/shared.component';
 
 
 @NgModule({
@@ -18,9 +16,7 @@ import { SharedComponent } from './visuals/shared/shared.component';
     AppComponent,
     TodoOverviewComponent,
     TodoListComponent,
-    TableauTestComponent,
-    LineExampleComponent,
-    SharedComponent
+    TableauTestComponent
   ],
   imports: [
     BrowserModule,

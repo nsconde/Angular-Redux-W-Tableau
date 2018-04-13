@@ -25,11 +25,11 @@
     "core-js": "^2.4.1",
     "d3": "^5.0.0",
     "redux": "^3.7.2",
-    "rxjs": "^5.4.2",
+    "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.7.3",
+    "@angular/cli": "^1.7.3",
     "@angular/compiler-cli": "^5.2.9",
     "@angular/language-service": "^5.2.9",
     "@types/d3": "^5.0.0",
@@ -47,6 +47,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
-    "typescript": "^2.6.2"
+    "typescript": "2.4.2"
   }
 }
