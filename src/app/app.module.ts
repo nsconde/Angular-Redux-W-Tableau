@@ -9,6 +9,10 @@ import { AppComponent } from './app.component';
 import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TableauTestComponent } from './tableau-test/tableau-test.component';
+import { D3Service, D3_DIRECTIVES } from './d3-graph';
+
+import { GraphComponent } from './visuals/graph/graph.component';
+import { SHARED_VISUALS } from './visuals/shared';
 
 
 @NgModule({
@@ -16,14 +20,17 @@ import { TableauTestComponent } from './tableau-test/tableau-test.component';
     AppComponent,
     TodoOverviewComponent,
     TodoListComponent,
-    TableauTestComponent
+    TableauTestComponent,
+    GraphComponent,
+    ...SHARED_VISUALS,
+    ...D3_DIRECTIVES
   ],
   imports: [
     BrowserModule,
     NgReduxModule,
     FormsModule
   ],
-  providers: [],
+  providers: [D3Service],
   bootstrap: [AppComponent]
 })
 export class AppModule {
