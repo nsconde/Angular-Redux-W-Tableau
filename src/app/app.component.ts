@@ -12,6 +12,12 @@ export class AppComponent {
   nodes: Node[] = [];
   links: Link[] = [];
 
+  activeClass = false;
+
+  onClickNav() {
+    this.activeClass = !this.activeClass;
+  }
+
   constructor() {
     const N = APP_CONFIG.N,
       getIndex = number => number - 1;

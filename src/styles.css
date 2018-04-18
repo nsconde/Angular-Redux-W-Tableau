@@ -4,6 +4,12 @@ body {
     background-color:#205081;
 }
 
+html,body {
+      --nav-height:50px;
+/*     font-family:Roboto; */
+    --nav-half:calc(var(--nav-height) / 2);
+}
+
 @-ms-viewport {
     width: device-width;
   }
