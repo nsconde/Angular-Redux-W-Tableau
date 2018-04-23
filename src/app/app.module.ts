@@ -15,6 +15,7 @@ import { GraphComponent } from './visuals/graph/graph.component';
 import { SHARED_VISUALS } from './visuals/shared';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { TabViewComponent } from './tab-view/tab-view.component';
+import { GridsterModule } from 'angular-gridster2';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { TabViewComponent } from './tab-view/tab-view.component';
   imports: [
     BrowserModule,
     NgReduxModule,
-    FormsModule
+    FormsModule,
+    GridsterModule
   ],
   providers: [D3Service],
   bootstrap: [AppComponent]

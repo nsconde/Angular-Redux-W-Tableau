@@ -28,63 +28,53 @@
 			</ul>
 			<div class="row contentView">
 				<div class="col-md-3 contentPanel">
-            <!-- <ul class="list-group"> -->
-              <!-- <li class="list-group-item d-flex justify-content-between align-items-center active"> -->
-                <!-- Tableau -->
-                <!-- <span class="badge badge-primary badge-pill">14</span> -->
-              <!-- </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center active"> -->
-                <!-- D3 -->
-                <!-- <span class="badge badge-primary badge-pill">2</span> -->
-              <!-- </li>
-						</ul> -->
-						<div class="nav-bar" [class.active]="activeClass">
-							<div class="overflow-container">
-								<!-- <button class="open-nav" (click)="onClickNav()">
-									<i class="fa fa-bars"></i>
-									<i class="fa fa-close"></i>
-								</button> -->
-								<div class="content">
-									<input type="text" class="search-bar" placeholder="Search records.">
-									<button class="search">
-										<i class="fa fa-search"></i>
-									</button>
-								</div>
+					<div class="nav-bar" [class.active]="activeClass">
+						<div class="overflow-container">
+							<!-- <button class="open-nav" (click)="onClickNav()">
+								<i class="fa fa-bars"></i>
+								<i class="fa fa-close"></i>
+							</button> -->
+							<div class="content">
+								<input type="text" class="search-bar" placeholder="Search records.">
+								<button class="search">
+									<i class="fa fa-search"></i>
+								</button>
 							</div>
 						</div>
-						<div class="searchList">
-							<!-- <ul class="listItems">
-								<li *ngFor='let value of values; trackBy: index;'> {{value}} </li>
-							</ul> -->
-							<ul class="listItems">
-								<li>
-									<a href="#">Persons</a>
-									<ul class="listItems">
-										<li>
-											<a href="#">Osama Bin Laden</a>
-										</li>
-										<li>
-											<a href="#">Sadaam Hussein</a>
-										</li>
-										<li>
-											<a href="#">Donald Trump</a>
-										</li>
-										<li>
-											<a href="#">Barack Obama</a>
-										</li>
-										<li>
-											<a href="#">Joe Rogan</a>
-										</li>
-										<li>
-											<a href="#">Mark Zuckerberg</a>
-										</li>
-										<li>
-											<a href="#">Tommy Hilfiger</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
+					</div>
+					<div class="searchList">
+						<!-- <ul class="listItems">
+							<li *ngFor='let value of values; trackBy: index;'> {{value}} </li>
+						</ul> -->
+						<ul class="listItems">
+							<li>
+								<a class="category" href="#">Persons <span class="badge badge-primary badge-pill">7</span></a>
+								<ul class="listItems">
+									<li>
+										<a href="#">Osama Bin Laden</a>
+									</li>
+									<li>
+										<a href="#">Sadaam Hussein</a>
+									</li>
+									<li>
+										<a href="#">Donald Trump</a>
+									</li>
+									<li>
+										<a href="#">Barack Obama</a>
+									</li>
+									<li>
+										<a href="#">Joe Rogan</a>
+									</li>
+									<li>
+										<a href="#">Mark Zuckerberg</a>
+									</li>
+									<li>
+										<a href="#">Tommy Hilfiger</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div [ngSwitch]="view" class="col-md-9 contentPanel">
 					<app-tab-view *ngSwitchCase="'tab'"></app-tab-view>

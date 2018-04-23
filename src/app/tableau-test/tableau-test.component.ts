@@ -23,7 +23,7 @@ export class TableauTestComponent implements OnInit {
     let placeholderDiv = document.getElementById("tableauViz");
     let url = "http://localhost/views/testScenarioWork/Sheet1?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no";
     let options = {
-      width: placeholderDiv.offsetWidth,
+      width: "100%",
       height: 750,
       hideTabs: true,
       hideToolbar: true,

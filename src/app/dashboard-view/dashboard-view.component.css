@@ -11,6 +11,14 @@
     background-color: #f8f8f8;
 }
 
+gridster {
+    padding-left: 0.5em;
+}
+
 .gridContainer {
-    
+    height: 100%;
+}
+
+.gridContainer .row {
+    height: inherit;
 }

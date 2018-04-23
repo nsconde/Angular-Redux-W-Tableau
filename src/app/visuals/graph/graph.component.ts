@@ -31,10 +31,10 @@ export class GraphComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     /** Receiving an initialized simulated graph from our custom d3 service */
-    this.options.height = 400;
-    this.options.width = 400;
-    console.log(this["_options"]);
-    console.log(this.options);
+    // this.options.height = 400;
+    // this.options.width = 400;
+    // console.log(this["_options"]);
+    // console.log(this.options);
     this.graph = this.d3Service.getForceDirectedGraph(this.nodes, this.links, this.options);
 
     /** Binding change detection check on each tick
@@ -53,8 +53,8 @@ export class GraphComponent implements OnInit, AfterViewInit {
 
   get options() {
     return this._options = {
-      width: 400,
-      height: 400
+      width: 500,
+      height: 500
     };
   }
 }

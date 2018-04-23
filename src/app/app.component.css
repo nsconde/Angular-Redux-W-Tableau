@@ -177,6 +177,10 @@ ul.listItems a {
   display: block;
 }
 
+ul.listItems a.category {
+    display: inline;
+}
+
 ul.listItems ul {
   margin-left: 0;
 }
