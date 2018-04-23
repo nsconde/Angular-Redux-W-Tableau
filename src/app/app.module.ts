@@ -13,6 +13,7 @@ import { D3Service, D3_DIRECTIVES } from './d3-graph';
 
 import { GraphComponent } from './visuals/graph/graph.component';
 import { SHARED_VISUALS } from './visuals/shared';
+import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SHARED_VISUALS } from './visuals/shared';
     TableauTestComponent,
     GraphComponent,
     ...SHARED_VISUALS,
-    ...D3_DIRECTIVES
+    ...D3_DIRECTIVES,
+    DashboardViewComponent
   ],
   imports: [
     BrowserModule,

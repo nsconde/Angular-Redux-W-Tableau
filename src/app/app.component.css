@@ -11,15 +11,15 @@
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
-    border: 0px solid #000000;
+    border: 3px solid #cf0921ba;
     min-height: 775px;
 }
 
 .contentView .contentPanel {
     padding-top: 10px;
-    -webkit-box-shadow: 4px 0px 40px 6px rgba(0,0,0,0.29);
-    -moz-box-shadow: 4px 0px 40px 6px rgba(0,0,0,0.29);
-    box-shadow: 4px 0px 18px 6px rgba(0,0,0,0.29);
+    -moz-box-shadow: 2px 0px 9px 4px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 2px 0px 9px 4px rgba(0,0,0,0.29);
+    box-shadow: 2px 0px 9px 4px rgba(0,0,0,0.29);
 }
 
 .list-group-item.active {
@@ -52,7 +52,6 @@
     display: inline;
 }
 .overflow-container{
-    height:100%;
     width:100%;
     overflow:hidden;
 }
@@ -100,7 +99,7 @@
 .open-nav{
     width:var(--nav-height);
     /* height:100%; */
-    background:orangered;
+    background:#f37445;
     color:#fff;
     border-radius:50%;
     border:0;
@@ -152,7 +151,71 @@
 .search{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background:rgb(56,96,250);
+    background:#205081;
 }
 .nav-bar.active .fa-bars,.nav-bar .fa-close{display: none;}
 .nav-bar.active .fa-close,.nav-bar .fa-bars{display: inline-block;}
+
+.searchList {
+    background-color: #f8f8f8;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+.searchList .listItems {
+    list-style-type: none;
+}
+
+ul.listItems {
+  /* opacity: 0; */
+  margin-left: 0;
+  padding: 1.2em;
+}
+ul.listItems a {
+  display: block;
+}
+
+ul.listItems ul {
+  margin-left: 0;
+}
+ul.listItems li {
+  margin-bottom: 1px;
+}
+ul.listItems li:last-child {
+  margin-bottom: 0px;
+}
+ul.listItems li:first-child {
+  margin-top: 1px;
+}
+ul.listItems li.active a {
+  background: #E3E3E3;
+}
+ul.listItems li.active li:last-child > a {
+  border-radius: 0px 0px 3px 3px;
+}
+ul.listItems li.active > a {
+  background: #008cba;
+  color: #FFF;
+  border-radius: 3px 3px 0px 0px;
+}
+ul.listItems li > a:hover {
+  background: #cf0921ba;
+  color: #FFF;
+}
+ul.listItems a {
+  padding: 5px 0px 5px 1em;
+}
+ul.listItems li li > a {
+  padding-left: 1em;
+}
+ul.listItems li li li > a {
+  padding-left: 2em;
+}
+ul.listItems li li li li > a {
+  padding-left: 3em;
+}
+ul.listItems li li li li li > a {
+  padding-left: 4em;
+}

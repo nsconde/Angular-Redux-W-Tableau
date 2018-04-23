@@ -20,9 +20,9 @@ export class TableauTestComponent implements OnInit {
   }
 
   initViz() {
-    var placeholderDiv = document.getElementById("tableauViz");
-    var url = "https://public.tableau.com/views/RottenTomatoes-Criticsvs_Audience/RT-Criticsvs_Audience?:embed=y&:display_count=yes";
-    var options = {
+    let placeholderDiv = document.getElementById("tableauViz");
+    let url = "http://localhost/views/testScenarioWork/Sheet1?iframeSizedToWindow=true&:embed=y&:showAppBanner=false&:display_count=no&:showVizHome=no";
+    let options = {
       width: placeholderDiv.offsetWidth,
       height: 750,
       hideTabs: true,
@@ -32,6 +32,6 @@ export class TableauTestComponent implements OnInit {
         this.activeSheet = this.workbook.getActiveSheet();
       }
     };
-    var viz = new tableau.Viz(placeholderDiv, url, options);
+    let viz = new tableau.Viz(placeholderDiv, url, options);
   }
 }

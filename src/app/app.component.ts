@@ -14,9 +14,11 @@ export class AppComponent {
 
   activeClass = false;
 
-  onClickNav() {
-    this.activeClass = !this.activeClass;
-  }
+  // onClickNav() {
+  //   this.activeClass = !this.activeClass;
+  // }
+
+  public values: number[] = [1, 2, 3];
 
   constructor() {
     const N = APP_CONFIG.N,
