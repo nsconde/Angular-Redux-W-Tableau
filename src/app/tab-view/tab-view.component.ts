@@ -1,30 +1,15 @@
-import { Component } from '@angular/core';
-import APP_CONFIG from './app.config';
-import '../assets/libs/tableau-2.0.0.min.js';
-import { Node, Link } from './d3-graph';
+import { Component, OnInit } from '@angular/core';
+import APP_CONFIG from '../app.config';
+import { Node, Link } from '../d3-graph';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-tab-view',
+  templateUrl: './tab-view.component.html',
+  styleUrls: ['./tab-view.component.css']
 })
-export class AppComponent {
+export class TabViewComponent implements OnInit {
   nodes: Node[] = [];
   links: Link[] = [];
-
-  activeClass = false;
-
-  view = "tab";
-
-  // onClickNav() {
-  //   this.activeClass = !this.activeClass;
-  // }
-
-  // public values: number[] = [1, 2, 3];
-
-  onChangeView(view) {
-    this.view = view;
-  }
 
   constructor() {
     const N = APP_CONFIG.N,
@@ -46,4 +31,8 @@ export class AppComponent {
       }
     }
   }
+
+  ngOnInit() {
+  }
+
 }

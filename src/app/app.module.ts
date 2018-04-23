@@ -14,6 +14,7 @@ import { D3Service, D3_DIRECTIVES } from './d3-graph';
 import { GraphComponent } from './visuals/graph/graph.component';
 import { SHARED_VISUALS } from './visuals/shared';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
+import { TabViewComponent } from './tab-view/tab-view.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
     GraphComponent,
     ...SHARED_VISUALS,
     ...D3_DIRECTIVES,
-    DashboardViewComponent
+    DashboardViewComponent,
+    TabViewComponent
   ],
   imports: [
     BrowserModule,

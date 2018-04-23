@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as interact from 'interactjs';
+import { Node, Link } from '../d3-graph';
 
 @Component({
   selector: 'app-dashboard-view',
@@ -8,7 +9,29 @@ import * as interact from 'interactjs';
 })
 export class DashboardViewComponent implements OnInit {
 
-  constructor() { }
+  nodes: Node[] = [];
+  links: Link[] = [];
+
+  constructor() {
+    const N = 10,
+      getIndex = number => number - 1;
+
+    /** constructing the nodes array */
+    for (let i = 1; i <= N; i++) {
+      this.nodes.push(new Node(i));
+    }
+
+    for (let i = 1; i <= N; i++) {
+      for (let m = 2; i * m <= N; m++) {
+        /** increasing connections toll on connecting nodes */
+        this.nodes[getIndex(i)].linkCount++;
+        this.nodes[getIndex(i * m)].linkCount++;
+
+        /** connecting the nodes before starting the simulation */
+        this.links.push(new Link(i, i * m));
+      }
+    }
+  }
 
   ngOnInit() {
     var element = document.getElementsByClassName("gridSnap"),

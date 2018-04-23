@@ -27,35 +27,35 @@ export class D3Service {
 
   /** A method to bind a draggable behaviour to an svg element */
   applyDraggableBehaviour(element, node: Node, graph: ForceDirectedGraph) {
-    const d3element = d3.select(element);
+    // const d3element = d3.select(element);
 
-    function started() {
-      /** Preventing propagation of dragstart to parent elements */
-      d3.event.sourceEvent.stopPropagation();
+    // function started() {
+    //   /** Preventing propagation of dragstart to parent elements */
+    //   d3.event.sourceEvent.stopPropagation();
 
-      if (!d3.event.active) {
-        graph.simulation.alphaTarget(0.3).restart();
-      }
+    //   if (!d3.event.active) {
+    //     graph.simulation.alphaTarget(0.3).restart();
+    //   }
 
-      d3.event.on('drag', dragged).on('end', ended);
+    //   d3.event.on('drag', dragged).on('end', ended);
 
-      function dragged() {
-        node.fx = d3.event.x;
-        node.fy = d3.event.y;
-      }
+    //   function dragged() {
+    //     node.fx = d3.event.x;
+    //     node.fy = d3.event.y;
+    //   }
 
-      function ended() {
-        if (!d3.event.active) {
-          graph.simulation.alphaTarget(0);
-        }
+    //   function ended() {
+    //     if (!d3.event.active) {
+    //       graph.simulation.alphaTarget(0);
+    //     }
 
-        node.fx = null;
-        node.fy = null;
-      }
-    }
+    //     node.fx = null;
+    //     node.fy = null;
+    //   }
+    // }
 
-    d3element.call(d3.drag()
-      .on('start', started));
+    // d3element.call(d3.drag()
+    //   .on('start', started));
   }
 
   getForceDirectedGraph(nodes: Node[], links: Link[], options: { width, height }) {

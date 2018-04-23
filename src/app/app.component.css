@@ -219,3 +219,7 @@ ul.listItems li li li li > a {
 ul.listItems li li li li li > a {
   padding-left: 4em;
 }
+
+.setView {
+    display: inherit;
+}

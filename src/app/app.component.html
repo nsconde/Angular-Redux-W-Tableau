@@ -16,15 +16,14 @@
 				<li class="nav-item">
 					<a class="nav-link disabled" href="#">Help</a>
 				</li>
-				<li class="nav-item dropdown ml-md-auto">
-					 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">View Control</a>
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Tab View</a> 
-						<a class="dropdown-item" href="#">Dashboard View</a> 
-						<!-- <a class="dropdown-item" href="#">Something else here</a>
-						<div class="dropdown-divider"></div> 
-						<a class="dropdown-item" href="#">Separated link</a> -->
+				<li class="nav-item dropdown ml-md-auto setView">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect01">View Select</label>
 					</div>
+					<select (change)="onChangeView($event.target.value)" class="custom-select" id="inputGroupSelect01">
+						<option selected value="tab">Tab View</option>
+						<option value="dashboard">Dashboard View</option>
+					</select>
 				</li>
 			</ul>
 			<div class="row contentView">
@@ -87,27 +86,9 @@
 							</ul>
 						</div>
 				</div>
-				<div class="col-md-9 contentPanel">
-					<div class="tabbable" id="tabs-333750">
-						<ul class="nav nav-tabs">
-							<li class="nav-item">
-								<a class="nav-link active" href="#panel-71749" data-toggle="tab">Graph</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#panel-708909" data-toggle="tab">Map</a>
-							</li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane active" id="panel-71749">
-								<!-- <app-tableau-test></app-tableau-test> -->
-								<graph [nodes]="nodes" [links]="links"></graph>
-							</div>
-							<div class="tab-pane" id="panel-708909">
-								<!-- <app-tableau-test></app-tableau-test> -->
-								<app-dashboard-view></app-dashboard-view>
-							</div>
-						</div>
-					</div>
+				<div [ngSwitch]="view" class="col-md-9 contentPanel">
+					<app-tab-view *ngSwitchCase="'tab'"></app-tab-view>
+					<app-dashboard-view *ngSwitchCase="'dashboard'"></app-dashboard-view>
 				</div>
 			</div>
 		</div>

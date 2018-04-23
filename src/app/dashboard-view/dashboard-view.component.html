@@ -1,14 +1,20 @@
-<div class="gridContainer">
-  <div id="grid-snap" class="gridSnap">
-    Dragging is constrained to the corners of a grid
+<div class="container">
+  <div class="row">
+    <div id="grid-snap" class="gridSnap">
+      <!-- Dragging is constrained to the corners of a grid -->      
+      <graph [nodes]="nodes" [links]="links"></graph>
+    </div>
+    <div id="grid-snap" class="gridSnap">
+      <!-- Dragging is constrained to the corners of a grid -->
+      <app-tableau-test></app-tableau-test>
+    </div>
   </div>
-  <div id="grid-snap" class="gridSnap">
-    Dragging is constrained to the corners of a grid
-  </div>
-  <div id="grid-snap" class="gridSnap">
-    Dragging is constrained to the corners of a grid
-  </div>
-  <div id="grid-snap" class="gridSnap">
-    Dragging is constrained to the corners of a grid
-  </div>
+  <!-- <div class="row">
+    <div id="grid-snap" class="gridSnap">
+      Dragging is constrained to the corners of a grid
+    </div>
+    <div id="grid-snap" class="gridSnap">
+      Dragging is constrained to the corners of a grid
+    </div>
+  </div> -->
 </div>
