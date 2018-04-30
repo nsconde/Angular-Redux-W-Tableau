@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../app.component';
-import * as interact from 'interactjs';
 import { Node, Link } from '../d3-graph';
 import { DisplayGrid, GridsterComponent, GridsterConfig, GridsterItem, GridsterItemComponentInterface, GridType } from 'angular-gridster2';
 
@@ -71,9 +70,10 @@ export class DashboardViewComponent implements OnInit {
     var element = document.getElementsByClassName("gridSnap"),
     x = 0, 
     y = 0;
+    
     this.options = {
       gridType: GridType.Fit,
-      displayGrid: DisplayGrid.Always,
+      displayGrid: DisplayGrid.None,
       pushItems: true,
       swap: false,
       draggable: {
@@ -93,28 +93,10 @@ export class DashboardViewComponent implements OnInit {
     };
 
     this.dashboard = [
-      { cols: 1, rows: 1, y: 0, x: 1 }
-      , { cols: 1, rows: 1, y: 0, x: 0 }
+      { cols: 1, rows: 1, y: 0, x: 1, name:"graph" }
+      , { cols: 1, rows: 1, y: 0, x: 0, name:"map" }
     ];
-    
-    // interact('.gridSnap')
-    //   .draggable({
-    //     inertia: true,
-    //     restrict: {
-    //       restriction: 'parent',
-    //       elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
-    //       endOnly: true
-    //     },
-    //     autoScroll:true
-    //   })
-    //   .on('dragmove', function (event) {
-    //     x += event.dx;
-    //     y += event.dy;
-
-    //     event.target.style.webkitTransform =
-    //       event.target.style.transform =
-    //       'translate(' + x + 'px, ' + y + 'px)';
-    //   });
+    console.log(this.dashboard);
   }
 
 }

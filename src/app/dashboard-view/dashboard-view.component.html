@@ -8,7 +8,8 @@
     </div> -->
     <gridster [options]="options">
       <gridster-item [item]="item" *ngFor="let item of dashboard">
-        <graph [nodes]="nodes" [links]="links"></graph>
+        <graph *ngIf="item.name === 'graph'" [nodes]="nodes" [links]="links"></graph>
+        <app-tableau-test  *ngIf="item.name === 'map'"></app-tableau-test>
       </gridster-item>
     </gridster>
   </div>
